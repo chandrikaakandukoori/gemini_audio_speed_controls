@@ -31,6 +31,33 @@ The extension adds a small floating speed button that allows users to change the
   - The selected speed is immediately applied to Gemini's audio.
 
 ---
+# 🎧 Gemini Listen Speed Control
+
+A Chrome extension that adds a simple **playback speed control** to Gemini's **Listen** feature.
+
+Users can choose between **0.75×, 1×, 1.25×, 1.5×, 1.75×, and 2×** while Gemini is reading a response aloud.
+
+## ✨ Features
+
+- 🎚️ Playback speeds: 0.75× to 2×
+- 🔵 Floating speed button
+- 📋 Dropdown speed menu
+- ✓ Highlights the selected speed
+- 🌙 Light/dark themed interface
+- ⚡ Changes playback speed instantly
+- 🖥️ Works directly on Gemini's website
+- 🔒 No external server or database required
+
+---
+
+## 📁 Project Structure
+
+```text
+gemini-listen-speed/
+├── manifest.json
+├── content.js
+├── styles.css
+└── README.md
 
 ## 📁 Project Structure
 
@@ -41,3 +68,4 @@ gemini-listen-speed/
 ├── content.js
 ├── styles.css
 └── README.md
+
