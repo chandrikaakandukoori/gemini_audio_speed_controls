@@ -1,0 +1,229 @@
+/* ================================
+   Gemini Listen Speed Controller
+   ================================ */
+
+#gemini-speed-control {
+    position: fixed;
+
+    right: 24px;
+    bottom: 24px;
+
+    z-index: 999999;
+
+    font-family:
+        "Google Sans",
+        "Roboto",
+        Arial,
+        sans-serif;
+
+    color: var(--gsc-text);
+}
+
+
+/* ---------- Main button ---------- */
+
+#gemini-speed-button {
+    width: 44px;
+    height: 44px;
+
+    border: none;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    background: var(--gsc-button-bg);
+    color: var(--gsc-text);
+
+    box-shadow: var(--gsc-shadow);
+
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+#gemini-speed-button:hover {
+    background: var(--gsc-button-hover);
+
+    transform: scale(1.05);
+}
+
+#gemini-speed-button:active {
+    transform: scale(0.95);
+}
+
+
+/* ---------- Speed icon ---------- */
+
+.speed-icon {
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: -0.3px;
+}
+
+
+/* ---------- Dropdown ---------- */
+
+#gemini-speed-menu {
+    position: absolute;
+
+    right: 0;
+    bottom: 54px;
+
+    width: 120px;
+
+    padding: 6px;
+
+    border-radius: 16px;
+
+    background: var(--gsc-menu-bg);
+
+    border: 1px solid var(--gsc-border);
+
+    box-shadow: var(--gsc-menu-shadow);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    opacity: 0;
+
+    transform:
+        translateY(8px)
+        scale(0.96);
+
+    pointer-events: none;
+
+    transform-origin: bottom right;
+
+    transition:
+        opacity 0.15s ease,
+        transform 0.15s ease;
+}
+
+
+/* Menu opened */
+
+#gemini-speed-menu.show {
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    pointer-events: auto;
+}
+
+
+/* ---------- Speed options ---------- */
+
+.speed-option {
+    width: 100%;
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 9px 12px;
+
+    margin: 1px 0;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    background: transparent;
+
+    color: var(--gsc-text);
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    transition:
+        background 0.12s ease;
+}
+
+
+/* Hover */
+
+.speed-option:hover {
+    background: var(--gsc-hover);
+}
+
+
+/* Selected speed */
+
+.speed-option.selected {
+    background: var(--gsc-selected);
+
+    font-weight: 600;
+}
+
+
+/* ================================
+   LIGHT THEME
+   ================================ */
+
+@media (prefers-color-scheme: light) {
+
+    #gemini-speed-control {
+
+        --gsc-text: #1f1f1f;
+
+        --gsc-button-bg: #f0f4f9;
+
+        --gsc-button-hover: #e3e8ef;
+
+        --gsc-menu-bg: rgba(255, 255, 255, 0.96);
+
+        --gsc-hover: #eef1f5;
+
+        --gsc-selected: #dce8ff;
+
+        --gsc-border: rgba(0, 0, 0, 0.08);
+
+        --gsc-shadow:
+            0 3px 12px rgba(0, 0, 0, 0.16);
+
+        --gsc-menu-shadow:
+            0 8px 28px rgba(0, 0, 0, 0.18);
+    }
+}
+
+
+/* ================================
+   DARK THEME
+   ================================ */
+
+@media (prefers-color-scheme: dark) {
+
+    #gemini-speed-control {
+
+        --gsc-text: #e3e3e3;
+
+        --gsc-button-bg: #2b2f33;
+
+        --gsc-button-hover: #3a3f44;
+
+        --gsc-menu-bg: rgba(42, 45, 49, 0.97);
+
+        --gsc-hover: #363a40;
+
+        --gsc-selected: #414b5e;
+
+        --gsc-border: rgba(255, 255, 255, 0.08);
+
+        --gsc-shadow:
+            0 3px 12px rgba(0, 0, 0, 0.4);
+
+        --gsc-menu-shadow:
+            0 8px 30px rgba(0, 0, 0, 0.45);
+    }
+}
