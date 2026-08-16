@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Gemini Listen Speed Control",
+  "version": "1.0",
+  "description": "Adds playback speed controls to Gemini Listen.",
+  "content_scripts": [
+    {
+      "matches": ["https://gemini.google.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
